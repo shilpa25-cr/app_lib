@@ -22,6 +22,8 @@ gem 'devise'
 gem 'encrypted_id'
 gem 'jquery-rails'
 gem 'roo'
+gem 'rails_12factor'
+gem 'jquery'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
