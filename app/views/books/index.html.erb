@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<%= link_to 'New Book', new_book_path, class: "btn btn-primary btn-lg float-right" %>
+
+<br>
+<h3>Import Books</h3>
+<%= form_tag import_books_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Upload Books", class: "btn btn-success"%>
+<% end %>
+
+<h3> Search </h3>
+  <%= form_tag(search_path, method: :get) do %>  
+    <%= text_field_tag(:q, params[:q], placeholder: "Search") %>  
+    <%= submit_tag("Search", class: "btn btn-info")%>  
+<% end %>
+
+<br>
+<div>
+  <h1>Books</h1>
+  <%=  render "book_listing" %>
+<br>
+<%= link_to 'Back', root_path, class: "btn btn-secondary" %>
+</div>
